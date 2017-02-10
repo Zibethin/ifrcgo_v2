@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<!--[if lt IE 10]> <html class="lt-ie10 no-js"  lang=""> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Go Project Lab</title>
+  <meta name="description" content="">
+
+  <link rel="canonical" href="/ifrcgo_v2/appeals/">
+  <link rel="alternate" type="application/rss+xml" title="Go Project Lab" href="/ifrcgo_v2/feed.xml">
+
+  <link rel="stylesheet" href="/ifrcgo_v2/assets/styles/main.css">
+
+  <link rel="author" type="text/plain" href="humans.txt" />
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/graphics/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/graphics/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/graphics/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/graphics/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/graphics/favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/graphics/favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/graphics/favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/graphics/favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/graphics/favicon/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/graphics/favicon/apple-touch-icon-180x180.png">
+  <link rel="shortcut icon" href="/assets/graphics/favicon/favicon.ico">
+  <link rel="icon" type="image/png" href="/assets/graphics/favicon/favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/assets/graphics/favicon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/assets/graphics/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/assets/graphics/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/assets/graphicsfavicon/favicon-32x32.png" sizes="32x32">
+
+  <meta name="description" content="IFRC Disaster Appeals">
+  <meta itemprop="name" content="GO Appeals">
+  <meta itemprop="description" content="IFRC Disaster Appeals" >
+  <meta itemprop="image" content="" >
+  <meta name="twitter:card" content="product" >
+  <meta name="twitter:site" content="@publisher_handle" >
+  <meta name="twitter:title" content="GO Appeals" >
+  <meta name="twitter:description" content="IFRC Disaster Appeals" >
+  <meta name="twitter:creator" content="@author_handle" >
+  <meta name="twitter:image" content="" >
+
+  <!-- bower:css -->
+  <!-- endbower -->
+
+  <!-- inject:css -->
+  <link rel="stylesheet" href="/ifrcgo_v2/assets/styles/vendor/leaflet.css">
+  <link rel="stylesheet" href="/ifrcgo_v2/assets/styles/vendor/introjs.css">
+  <link rel="stylesheet" href="/ifrcgo_v2/assets/styles/vendor/jquery.dataTables.css">
+  <link rel="stylesheet" href="/ifrcgo_v2/assets/styles/vendor/dc.css">
+  <link rel="stylesheet" href="/ifrcgo_v2/assets/styles/vendor/c3.css">
+  <!-- endinject -->
+
+  
+
+  <link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Go Project Lab" />
+</head>
+
+<body>
+  <!--[if lt IE 10]>
+  <div id="nocando">
+  <h1>No can do!</h1>
+  <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+</div>
+<![endif]-->
+<!-- Start Top Bar -->
+<div class="top-bar medium-10">
+<div class="top-bar-left">
+    <img class="logo" src="/ifrcgo_v2/assets/logos/logo_test_Go.png">
+</div>
+<div class="top-bar-right">
+
+    <ul class="menu vertical medium-horizontal expanded" data-responsive-menu="drilldown medium-dropdown">
+      
+      
+      <li><a href="/" class="hvr-underline-reveal">Home</a></li>
+      
+      
+      
+      <li><a href="/#coredatasets" class="hvr-underline-reveal">Core Datasets</a></li>
+      
+      
+      
+      <li><a href="/#regions" class="hvr-underline-reveal">IFRC Regions</a></li>
+      
+      
+      
+      <li><a href="http://ifrc.org" class="hvr-underline-reveal">IFRC.org</a></li>
+      
+      
+      
+      <li><a href="https://fednet.ifrc.org/CookieAuth.dll?GetLogon?curl=Z2F&reason=0&formdir=2" class="hvr-underline-reveal">FedNet</a></li>
+      
+      
+      
+      <li><a href="https://www-secure.ifrc.org/DMISII/Pages/00_Home/login.aspx" class="hvr-underline-reveal">DMIS</a></li>
+      
+      
+    </ul>
+</div>
+</div>
+<!-- End Top Bar -->
+
+
+
+
+
+
+<div class="row">
+  <div class="small-8 large-8 columns large-centered">Below is a directory of the current appeal pages and appeal plus pages. Appeal plus pages have extra information provided by those working in the operation such as key figures, contacts and useful links. If you want an appeal page upgraded to an appeal plus page please contact <a href="mailto:ifrcgoproject@gmail.com">ifrcgoproject@gmail.com</a> with the request.</div>
+</div>
+
+<div class="row">
+<div class="title section-header small-centered">Current Appeal Plus pages</div>
+<div class="row small-up-1 medium-up-2 large-up-3">
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <div class="column"><a href="MDR65001">Europe - Migration Coordination, Response and Pr</a></div>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <div class="column"><a href="MDRPH022">Philippines - Typhoon Haima</a></div>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</div>
+</div>
+<div class="row">
+<div class="title section-header small-centered">All Appeal Pages</div>
+<div class="row small-up-1 medium-up-2 large-up-3">
+  
+    
+      <div class="column"><a href="MDRSY003">Syria - Syria Complex Emergency</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRTR003">Turkey - Population Movement</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRPH014">Philippines - Typhoon Haiyan</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRUA007">Ukraine - Complex Emergency</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRGN007">Guinea - Ebola Virus Disease</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRSL005">Sierra Leone - Ebola Virus Disease</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRLR001">Liberia - Ebola Virus Disease</a></div>
+    
+  
+    
+      <div class="column"><a href="MDR60002">Africa - Ebola Coordination and preparedness</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRNE013">Niger - Population Movement</a></div>
+    
+  
+    
+      <div class="column"><a href="MDR55001">Pacific - Tropical Cyclone Pam</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRIT002">Italy - Population Movement</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRNP008">Nepal - Earthquake</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRTZ017">Tanzania - Population Movement</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRGR001">Greece - Population Movement</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRBY006">Belarus - Population Movement</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRMK005">Macedonia (FYR) - Population Movement</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRSD022">Sudan - Population Movement</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRHU004">Hungary - Population Movement</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRRS011">Serbia - Population Movement</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRZW011">Zimbabwe - Food Insecurity</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRMW012">Malawi - Food Insecurity</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRNA009">Namibia - Food Insecurity</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRGT009">Guatemala - Drought</a></div>
+    
+  
+    
+  
+    
+      <div class="column"><a href="MDRCR014">Costa Rica - Population Movement</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRPH020">Philippines - Typhoon and Floods</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRPY018">Paraguay - Floods</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRET016">Ethiopia - Drought</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRMN005">Mongolia - Extreme Winter Condition</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRLS004">Lesotho - Food Insecurity</a></div>
+    
+  
+    
+      <div class="column"><a href="MDR42003">Zika Virus Disease Global Response</a></div>
+    
+  
+    
+      <div class="column"><a href="MDR42003">Zika Virus Disease Global Response</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRHR002">Croatia - Population Movement</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRFJ001">Fiji - Tropical Cyclone Winston</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRAO006">Angola - Yellow Fever</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRSV010">El Salvador - Drought</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRSO005">Somalia - Drought</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRBI012">Burundi - Complex Emergency</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRTP004">Timor Leste - Drought</a></div>
+    
+  
+    
+      <div class="column"><a href="MDREC012">Ecuador - Earthquake</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRMZ012">Mozambique - Food Insecurity</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRLK005">Sri Lanka - Floods & Landslides</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRBD016">Bangladesh - Cyclone Roanu</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRIQ008">Iraq - Population Movement</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRCD018">Dem Rep Congo - Epidemics: Yellow Fever, Cholera,</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRBD017">Bangladesh - Floods</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRSD023">Sudan - Floods</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRUG038">Uganda - Population Movement</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRKP008">DPR Korea - Floods</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRHT013">Haiti - Hurricane Matthew</a></div>
+    
+  
+    
+  
+    
+      <div class="column"><a href="MDRVN014">Vietnam - Floods</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRKE039">Kenya - Drought</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRDO009">Dominican Republic - Floods</a></div>
+    
+  
+    
+      <div class="column"><a href="MDRPH023">Philippines - Typhoon Nock-ten</a></div>
+    
+  
+</div>
+</div>
+
+
+
+<footer>
+<div class="callout-footer">
+ <div class="row small-12 large-up-5">
+  <h6>The International Federation of Red Cross and Red Crescent Societies (IFRC) is the world's largest humanitarian organization, with 190 member National Societies. As part of the International Red Cross and Red Crescent Movement, our work is guided by seven fundamental principles; humanity, impartiality, neutrality, independence, voluntary service, unity and universality.</h6>
+ </div>
+</div>
+</footer>
+
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-84297335-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+<!-- inject:js -->
+<script src="/ifrcgo_v2/assets/scripts/vendor/d3.js"></script>
+<script src="/ifrcgo_v2/assets/scripts/vendor/index.js"></script>
+<script src="/ifrcgo_v2/assets/scripts/vendor/jquery.js"></script>
+<script src="/ifrcgo_v2/assets/scripts/vendor/leaflet-src.js"></script>
+<script src="/ifrcgo_v2/assets/scripts/vendor/isotope.pkgd.min.js"></script>
+<script src="/ifrcgo_v2/assets/scripts/vendor/papaparse.js"></script>
+<script src="/ifrcgo_v2/assets/scripts/vendor/intro.js"></script>
+<script src="/ifrcgo_v2/assets/scripts/vendor/jquery.dataTables.js"></script>
+<script src="/ifrcgo_v2/assets/scripts/vendor/topojson.js"></script>
+<script src="/ifrcgo_v2/assets/scripts/vendor/crossfilter.min.js"></script>
+<script src="/ifrcgo_v2/assets/scripts/vendor/dc.js"></script>
+<script src="/ifrcgo_v2/assets/scripts/vendor/c3.js"></script>
+<!-- endinject -->
+
+<script>
+var worldmap = 'assets/map/worldmap.json';
+</script>
+
+<script src="https://rawgit.com/SimonbJohnson/HDX-3W/master/js/dc.leaflet.js" type="text/javascript"></script>
+
+<!-- <script src="/assets/scripts/main.min.js"></script> -->
+
+
+
+</body>
+
+</html>

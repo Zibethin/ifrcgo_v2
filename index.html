@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<!--[if lt IE 10]> <html class="lt-ie10 no-js"  lang=""> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>GO Home</title>
+  <meta name="description" content="">
+
+  <link rel="canonical" href="/ifrcgo_v2/">
+  <link rel="alternate" type="application/rss+xml" title="Go Project Lab" href="/ifrcgo_v2/feed.xml">
+
+  <link rel="stylesheet" href="/ifrcgo_v2/assets/styles/main.css">
+
+  <link rel="author" type="text/plain" href="humans.txt" />
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/graphics/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/graphics/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/graphics/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/graphics/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/graphics/favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/graphics/favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/graphics/favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/graphics/favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/graphics/favicon/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/graphics/favicon/apple-touch-icon-180x180.png">
+  <link rel="shortcut icon" href="/assets/graphics/favicon/favicon.ico">
+  <link rel="icon" type="image/png" href="/assets/graphics/favicon/favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/assets/graphics/favicon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/assets/graphics/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/assets/graphics/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/assets/graphicsfavicon/favicon-32x32.png" sizes="32x32">
+
+  <meta name="description" content="IFRC Disaster Appeals">
+  <meta itemprop="name" content="GO Appeals">
+  <meta itemprop="description" content="IFRC Disaster Appeals" >
+  <meta itemprop="image" content="" >
+  <meta name="twitter:card" content="product" >
+  <meta name="twitter:site" content="@publisher_handle" >
+  <meta name="twitter:title" content="GO Appeals" >
+  <meta name="twitter:description" content="IFRC Disaster Appeals" >
+  <meta name="twitter:creator" content="@author_handle" >
+  <meta name="twitter:image" content="" >
+
+  <!-- bower:css -->
+  <!-- endbower -->
+
+  <!-- inject:css -->
+  <link rel="stylesheet" href="/ifrcgo_v2/assets/styles/vendor/leaflet.css">
+  <link rel="stylesheet" href="/ifrcgo_v2/assets/styles/vendor/introjs.css">
+  <link rel="stylesheet" href="/ifrcgo_v2/assets/styles/vendor/jquery.dataTables.css">
+  <link rel="stylesheet" href="/ifrcgo_v2/assets/styles/vendor/dc.css">
+  <link rel="stylesheet" href="/ifrcgo_v2/assets/styles/vendor/c3.css">
+  <!-- endinject -->
+
+  
+    
+    <link rel="stylesheet" href="/ifrcgo_v2/assets/custom/css/leaflet_custom.css" media="screen" type="text/css">
+    
+  
+
+  <link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Go Project Lab" />
+</head>
+
+<body>
+  <!--[if lt IE 10]>
+  <div id="nocando">
+  <h1>No can do!</h1>
+  <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+</div>
+<![endif]-->
+<!-- Start Top Bar -->
+<div class="top-bar medium-10">
+<div class="top-bar-left">
+    <img class="logo" src="/ifrcgo_v2/assets/logos/logo_test_Go.png">
+</div>
+<div class="top-bar-right">
+
+    <ul class="menu vertical medium-horizontal expanded" data-responsive-menu="drilldown medium-dropdown">
+      
+      
+      <li><a href="/" class="hvr-underline-reveal">Home</a></li>
+      
+      
+      
+      <li><a href="/#coredatasets" class="hvr-underline-reveal">Core Datasets</a></li>
+      
+      
+      
+      <li><a href="/#regions" class="hvr-underline-reveal">IFRC Regions</a></li>
+      
+      
+      
+      <li><a href="http://ifrc.org" class="hvr-underline-reveal">IFRC.org</a></li>
+      
+      
+      
+      <li><a href="https://fednet.ifrc.org/CookieAuth.dll?GetLogon?curl=Z2F&reason=0&formdir=2" class="hvr-underline-reveal">FedNet</a></li>
+      
+      
+      
+      <li><a href="https://www-secure.ifrc.org/DMISII/Pages/00_Home/login.aspx" class="hvr-underline-reveal">DMIS</a></li>
+      
+      
+    </ul>
+</div>
+</div>
+<!-- End Top Bar -->
+
+
+
+
+
+
+
+<!-- TODO fix later -->
+<!-- <div class="row column alerts">
+  <p class="marquee"><span id="feed"></span></p>
+</div> -->
+
+<!--  TODO should auto update -->
+<div class="row column">
+  <ul class="vertical medium-horizontal menu expanded text-center">
+    <li><a href="#"><div class="stat">43</div><span>Emergency Appeals</span></a></li>
+    <li><a href="#"><div class="stat">15</div><span>DREFs</span></a></li>
+    <li><a href="#"><div class="stat">75%</div><span>Coverage</span></a></li>
+    <li><a href="#"><div class="stat">650M</div><span>Total Appeals</span></a></li>
+    <li><a href="#"><div class="stat">29M</div><span>Beneficiaries</span></a></li>
+  </ul>
+</div>
+
+<hr>
+
+<div class="row">
+  <div class="medium-6 columns">
+    <h1>Current Operations</h1>
+    <div id="map" class="leaflet-container"></div>
+  </div>
+  <div id="updates" class="medium-6 columns">
+    <h1>Latest Field Reports</h1>
+    <table id="fieldreports">
+    </table>
+    <h1>Latest Alerts</h1>
+    <table>
+      <tr><td>No alerts have been issued in the last 30 days</td></tr>
+    </table>
+  </div>
+</div>
+
+<hr>
+
+<div class="row small-12 medium-up-3">
+  <a name="coredatasets"><h1>Core Datasets</h1></a>
+  <div class="column">
+    <div class="card">
+		<div class="card-section text-center">
+			<img class="card-icon rcicon" src="/ifrcgo_v2/assets/icons/surge_icon.png">
+		</div>
+		<div class="card-section">
+			    <a href="/ifrcgo_v2/currentappeals" class="button alert expanded">Ongoing Operations</a>
+		</div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+		<div class="card-section text-center">
+			<img class="card-icon rcicon" src="/ifrcgo_v2/assets/icons/3w_icon.png">
+		</div>
+		<div class="card-section">
+			<a href="/ifrcgo_v2/global3w" class="button alert expanded">Who does, what and where? (3W)</a>
+		</div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+				<div class="card-section text-center">
+			<img class="card-icon rcicon" src="/ifrcgo_v2/assets/icons/appealsplus_icon.png">
+		</div>
+		<div class="card-section">
+			<a href="/ifrcgo_v2/histappeals" class="button alert expanded">Historic Appeals and DREFs</a>
+		</div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="row small-12 medium-up-4">
+  <a name="labs"><h1>GO Labs</h1></a>
+  <div class="column">
+    <div class="card">
+		<a href="https://52.91.94.199/fieldreports">
+			<div class="card-section text-center">
+				<span class="icon icon-file-image card-icon"></span>
+			</div>
+			<div class="card-section">
+				<span class="button secondary expanded">IFRC Field Reports</span>
+			</div>
+		</a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+		<a href="https://52.91.94.199/heops/">
+			<div class="card-section text-center">
+				<span class="icon icon-user-1 card-icon"></span>
+			</div>
+			<div class="card-section">
+				<span class="button secondary expanded">Head of Operations (HEOps) Deployments</span>
+			</div>
+		</a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+		<a href="/ifrcgo_v2/histappeals">
+			<div class="card-section text-center">
+				<span class="icon icon-chart-area card-icon"></span>
+			</div>
+			<div class="card-section">
+				<span class="button secondary expanded">Historic Appeals</span>
+			</div>
+		</a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+		<a href="/ifrcgo_v2/okrs">
+			<div class="card-section text-center">
+				<span class="icon icon-calendar card-icon"></span>
+			</div>
+			<div class="card-section">
+				<span class="button secondary expanded">OKRS</span>
+			</div>
+		</a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+		<a href="/ifrcgo_v2/summary">
+			<div class="card-section text-center">
+				<span class="icon icon-chart-bar card-icon"></span>
+			</div>
+			<div class="card-section">
+				<span class="button secondary expanded">Summary</span>
+			</div>
+		</a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+		<a href="https://ifrc-europe.github.io/migration-portal/">
+			<div class="card-section text-center">
+				<span class="icon icon-users card-icon"></span>
+			</div>
+			<div class="card-section">
+				<span class="button secondary expanded">European Migration Portal</span>
+			</div>
+		</a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+		<a href="https://52.91.94.199/eru_readiness/">
+			<div class="card-section text-center">
+				<img class="card-icon" src="/ifrcgo_v2/assets/graphics/ERU.gif" style="height:20px;">
+			</div>
+			<div class="card-section">
+				 <span class="button secondary expanded">Emergency Response Units (ERU) Readiness</span>
+			</div>
+		</a>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="row column">
+  <a name="regions"><h1>IFRC Regions</h1></a>
+</div>
+
+<div class="row small-12 medium-up-3 large-up-5">
+  <div class="column">
+    <div class="card iconmap">
+	    <div class="card-section text-center">
+			<a href="americas.html" target="_blank" class="icons-regions">
+			  <img class="thumbnail-icons" src="/ifrcgo_v2/assets/icon maps/icons/icon map americas.png">
+			</a>
+		</div>
+		<div class="card-section">
+			<a href="americas.html" target="_blank" class="icons-regions">
+			  <h2 class="text-center">Americas</h2>
+			</a>
+		</div>
+	  </div>
+  </div>
+  <div class="column">
+    <div class="card iconmap">
+	  <div class="card-section text-center">
+			<a href="europe.html" target="_blank" class="icons-regions">
+			  <img class="thumbnail-icons" src="/ifrcgo_v2/assets/icon maps/icons/icon map europe.png">
+			</a>
+		</div>
+		<div class="card-section">
+			<a href="europe.html" target="_blank" class="icons-regions">
+			  <h2 class="text-center">Europe</h2>
+			</a>
+		</div>
+	  </div>
+  </div>
+  <div class="column">
+    <div class="card iconmap">
+	  <div class="card-section text-center">
+			<a href="mena.html" target="_blank" class="icons-regions">
+			  <img class="thumbnail-icons" src="/ifrcgo_v2/assets/icon maps/icons/icon map mena.png">
+			</a>
+		</div>
+		<div class="card-section">
+			<a href="mena.html" target="_blank" class="icons-regions">
+			  <h2 class="text-center">MENA</h2>
+			</a>
+		</div>
+	  </div>
+  </div>
+  <div class="column">
+    <div class="card iconmap">
+	  <div class="card-section text-center">
+			<a href="asiapacific.html" target="_blank" class="icons-regions">
+			  <img class="thumbnail-icons" src="/ifrcgo_v2/assets/icon maps/icons/icon map asia_pac.png">
+			</a>
+		</div>
+		<div class="card-section">
+			<a href="asiapacific.html" target="_blank" class="icons-regions">
+			  <h2 class="text-center">Asia Pacific</h2>
+			</a>
+		</div>
+	  </div>
+  </div>
+  <div class="column">
+    <div class="card iconmap">
+	  <div class="card-section text-center">
+			<a href="africa.html" target="_blank" class="icons-regions">
+			  <img class="thumbnail-icons" src="/ifrcgo_v2/assets/icon maps/icons/icon map africa.png">
+			</a>
+		</div>
+		<div class="card-section">
+			<a href="africa.html" target="_blank" class="icons-regions">
+			  <h2 class="text-center">Africa</h2>
+			</a>
+		</div>
+	  </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="row">
+  <h3>The IFRC GO Platform aims to make all disaster information universally accessible and useful to IFRC responders for better decision making</h3>
+</div>
+
+<hr>
+
+<div class="row small-12 medium-up-3">
+  <div class="column">
+    <div class="card">
+	    <div class="card-section text-center">
+			<a href="http://rcrcsims.org/" target="_blank" class="icons-regions">
+			  <h1>SIMS</h1>
+			</a>
+		</div>
+		<div class="card-section">
+			<div class="columns">
+			  <p>Surge Information Management Support (SIMS) is a network of information management and mapping specialists that provide information management for international disaster response operations across the RCRC Movement.</p>
+			</div>
+		</div>
+	  </div>
+  </div>
+  <div class="column">
+    <div class="card">
+	    <div class="card-section text-center">
+			<a href="http://rcrcsims.org/" target="_blank" class="icons-regions">
+			  <h1>IFRC Data Initiatives</h1>
+			</a>
+		</div>
+		<div class="card-section">
+			<div class="columns">
+			  <p>IFRC is a data-driven organization dedicated to making evidence-based decision-making. Through data.ifrc.org you will be able to access the Federation-wide Databank and Reporting System (FDRS) that provides data about all the National Societies.</p>
+			</div>
+		</div>
+	  </div>
+  </div>
+  <div class="column">
+    <div class="card">
+	    <div class="card-section text-center">
+			<a href="hhttps://github.com/IFRCGo" target="_blank" class="icons-regions">
+			  <h1>Go Lab</h1>
+			  <span class="icon icon-github-circled card-icon"></span>
+			</a>
+		</div>
+		<div class="card-section">
+			<div class="columns">
+			  <p>All our products and tools are available on the IFRC GO github page.</p>
+			</div>
+		</div>
+	  </div>
+  </div>
+</div>
+
+
+
+<footer>
+<div class="callout-footer">
+ <div class="row small-12 large-up-5">
+  <h6>The International Federation of Red Cross and Red Crescent Societies (IFRC) is the world's largest humanitarian organization, with 190 member National Societies. As part of the International Red Cross and Red Crescent Movement, our work is guided by seven fundamental principles; humanity, impartiality, neutrality, independence, voluntary service, unity and universality.</h6>
+ </div>
+</div>
+</footer>
+
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-84297335-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+<!-- inject:js -->
+<script src="/ifrcgo_v2/assets/scripts/vendor/d3.js"></script>
+<script src="/ifrcgo_v2/assets/scripts/vendor/index.js"></script>
+<script src="/ifrcgo_v2/assets/scripts/vendor/jquery.js"></script>
+<script src="/ifrcgo_v2/assets/scripts/vendor/leaflet-src.js"></script>
+<script src="/ifrcgo_v2/assets/scripts/vendor/isotope.pkgd.min.js"></script>
+<script src="/ifrcgo_v2/assets/scripts/vendor/papaparse.js"></script>
+<script src="/ifrcgo_v2/assets/scripts/vendor/intro.js"></script>
+<script src="/ifrcgo_v2/assets/scripts/vendor/jquery.dataTables.js"></script>
+<script src="/ifrcgo_v2/assets/scripts/vendor/topojson.js"></script>
+<script src="/ifrcgo_v2/assets/scripts/vendor/crossfilter.min.js"></script>
+<script src="/ifrcgo_v2/assets/scripts/vendor/dc.js"></script>
+<script src="/ifrcgo_v2/assets/scripts/vendor/c3.js"></script>
+<!-- endinject -->
+
+<script>
+var worldmap = 'assets/map/worldmap.json';
+</script>
+
+<script src="https://rawgit.com/SimonbJohnson/HDX-3W/master/js/dc.leaflet.js" type="text/javascript"></script>
+
+<!-- <script src="/assets/scripts/main.min.js"></script> -->
+
+
+  
+  <script src='/ifrcgo_v2/assets/custom/js/landing.js' type="text/javascript"></script>
+  
+
+
+</body>
+
+</html>
