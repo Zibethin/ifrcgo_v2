@@ -121,7 +121,7 @@ function updateTable(data){
 		if(d['#meta+type']=='DREF'){
 			var url = 'http://www.ifrc.org/en/publications-and-reports/appeals/?ac='+d['#meta+id']+'&at=0&c=&co=&dt=1&f=&re=&t=&ti=&zo='
 				} else {
-					var url = 'https://ifrcgo.github.io/pages/appeals/code/#'+d['#meta+id']
+					var url = 'http://ifrcgo.org/appeals/'+d['#meta+id'].toLowerCase()
 					}
 		html += '<tr><td class="details-controls" data-id="'+d['#meta+id']+'"></td><td>'+d['#meta+type']+'</td><td>'+d['#crisis+name']+'</td><td>'+d['#region+name']+'</td><td>'+d['#crisis+type']+'</td><td>'+d['#date+start']+'</td><td>'+d['#date+end']+'</td><td>'+niceFormatNumber(d['#targeted'])+'</td><td>'+niceFormatNumber(d['#meta+value'])+'</td><td>'+niceFormatNumber(d['#meta+funding'])+'</td><td id="coverage'+i+'"></td><td><a href="'+url+'" target="_blank">'+d['#meta+id']+'</a></td></tr>';
 	});
@@ -162,7 +162,7 @@ function updateMap(data,region){
 		var fillOpacity = 0;
 		var cls = 'country'
 		if(data.map(function(e) { if(e['#region+name']==region || region=='All'){return e['#country+code']}; }).indexOf(feature.properties['ISO_A3'])>-1){
-			color = '#B71C1C';
+			color = '#D33F49';
 			fillOpacity = 0.7;
 			cls = 'appealcountry country appeal'+feature.properties['ISO_A3']
 		};
@@ -208,7 +208,7 @@ function createMap(data,geom){
 		var cls = 'country'
 
 		if(data.map(function(e) { return e['#country+code']; }).indexOf(feature.properties['ISO_A3'])>-1){
-			color = '#B71C1C';
+			color = '#D33F49';
 			fillOpacity = 0.7;
 			cls = 'appealcountry country appeal'+feature.properties['ISO_A3']
 		};
@@ -281,7 +281,7 @@ function createPie(id,width,inner,percent){
 		.attr("transform", "translate("+(width/2)+","+(width/2)+")");
 
 	svg.append("path")
-		.style("fill", "#b71c1c")
+		.style("fill", "#D33F49")
 		.attr("d", fundingArc)
 		.attr("transform", "translate("+(width/2)+","+(width/2)+")");
 
@@ -378,7 +378,7 @@ function dataPrep(data){
 var map = '';
 var table='';
 // $('#loadingmodal').modal('show');
-var appealsurl = 'https://beta.proxy.hxlstandard.org/data.json?strip-headers=on&filter03=merge&clean-date-tags01=%23date&filter02=select&merge-keys03=%23meta%2Bid&filter04=replace-map&filter05=merge&merge-tags03=%23meta%2Bcoverage%2C%23meta%2Bfunding&select-query02-01=%23date%2Bend%3E999999&merge-keys05=%23country%2Bname&merge-tags05=%23country%2Bcode&filter01=clean&replace-map-url04=https%3A//docs.google.com/spreadsheets/d/1hTE0U3V8x18homc5KxfA7IIrv1Y9F1oulhJt0Z4z3zo/edit%3Fusp%3Dsharing&merge-url03=https%3A//docs.google.com/spreadsheets/d/1rVAE8b3uC_XIqU-eapUGLU7orIzYSUmvlPm9tI0bCbU/edit%23gid%3D0&merge-url05=https%3A//docs.google.com/spreadsheets/d/1GugpfyzridvfezFcDsl6dNlpZDqI8TQJw-Jx52obny8/edit%3Fusp%3Dsharing&url=https%3A//docs.google.com/spreadsheets/d/19pBx2NpbgcLFeWoJGdCqECT2kw9O9_WmcZ3O41Sj4hU/edit%23gid%3D0'
+var appealsurl = 'https://proxy.hxlstandard.org/data.json?strip-headers=on&filter03=merge&clean-date-tags01=%23date&filter02=select&merge-keys03=%23meta%2Bid&filter04=replace-map&filter05=merge&merge-tags03=%23meta%2Bcoverage%2C%23meta%2Bfunding&select-query02-01=%23date%2Bend%3E999999&merge-keys05=%23country%2Bname&merge-tags05=%23country%2Bcode&filter01=clean&replace-map-url04=https%3A//docs.google.com/spreadsheets/d/1hTE0U3V8x18homc5KxfA7IIrv1Y9F1oulhJt0Z4z3zo/edit%3Fusp%3Dsharing&merge-url03=https%3A//docs.google.com/spreadsheets/d/1rVAE8b3uC_XIqU-eapUGLU7orIzYSUmvlPm9tI0bCbU/edit%23gid%3D0&merge-url05=https%3A//docs.google.com/spreadsheets/d/1GugpfyzridvfezFcDsl6dNlpZDqI8TQJw-Jx52obny8/edit%3Fusp%3Dsharing&url=https%3A//docs.google.com/spreadsheets/d/19pBx2NpbgcLFeWoJGdCqECT2kw9O9_WmcZ3O41Sj4hU/edit%23gid%3D0'
 var today = new Date();
 var dd = today.getDate();
 var mm = today.getMonth()+1;

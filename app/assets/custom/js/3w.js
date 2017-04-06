@@ -4,6 +4,7 @@ function generateDash(data,geom,config){
     $('#datadownload').attr('href',config['download']);
     $('.title3w').html(config['title']);
     $('#description').html(config['description']);
+    
     var cf = crossfilter(data);
         cf.whereDim = cf.dimension(function(d){return d[config['whereFieldName']]});
         cf.whoDim = cf.dimension(function(d){return d[config['whoFieldName']]});
@@ -75,36 +76,13 @@ function generateDash(data,geom,config){
                 $('#mapfilter').html(html);
             }));
 
-        //config()
-        /*
         dc.dataTable("#data-table")
             .dimension(cf.whereDim)
             .group(function (d) {
                     return 0;
             })
-            .ordering(function(d){ return -d.value })
-            .size(650)
-            .columns([
-                function(d){
-                   return d['#country+name'];
-                },
-                function(d){
-                   return d['#org'];
-                },
-                function(d){
-                   return d['#sector'];
-                },
-                function(d){
-                    if(d['#meta+url'].length>0){
-                        return '<a href="'+d['#meta+url']+'" target="_blank">Link</a>';
-                    } else {
-                        return 'No link available';
-                    }
-                }
-            ]).sortBy(function(d) {
-                return d['#country+name'];
-            });
-            */
+            .columns(config['table'].split(','));
+
     dc.renderAll();
 
     var map = cf.whereChart.map();
@@ -181,7 +159,7 @@ function createConfig(data){
 
 function processHash(){
     var hashid = decodeURIComponent(window.location.hash).substring(1);
-    var hashurl = 'https://beta.proxy.hxlstandard.org/data.json?url=https%3A//docs.google.com/spreadsheets/d/17Qm5o5YTiSA7seoLDa8OQWcX8NPQW62PXfNG3BCn7mQ/edit%3Fusp%3Dsharing&strip-headers=on&filter01=select&force=on&select-query01-01=%23meta%2Bid%3D'+hashid;
+    var hashurl = 'https://proxy.hxlstandard.org/data.json?url=https%3A//docs.google.com/spreadsheets/d/17Qm5o5YTiSA7seoLDa8OQWcX8NPQW62PXfNG3BCn7mQ/edit%3Fusp%3Dsharing&strip-headers=on&filter01=select&force=on&select-query01-01=%23meta%2Bid%3D'+hashid;
 
     var hashCall = $.ajax({
         type: 'GET',
@@ -216,7 +194,6 @@ function processHash(){
                 } else  {
                     geom = geomArgs[0];
                 }
-                // $('#loadingmodal').modal('hide');
                 generateDash(data,geom,config);
             });
 
